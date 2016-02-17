@@ -1,0 +1,35 @@
+
+<ion-view view-title="{{firstName}}">
+   <ion-nav-buttons side="right">
+       <button class="button button-icon " ng-click="saveRating(studentdetail)" >
+           Save
+       </button>
+       
+   </ion-nav-buttons>     
+  <ion-content class="has-header">
+   <ion-list ng-repeat="(key,value) in studentdetail|groupBy:'standardName'">
+      
+          <ion-item class="item-divider"> 
+              {{key}}
+          </ion-item>
+          
+          <ion-item ng-repeat="student in value" class="item-button-right" >
+              <p>{{student.skillName}}</p>
+              <div class="buttons">
+                <label class="checkbox checkbox-balanced">
+                    <input type="checkbox" ng-checked="student.rating==3" ng-click="student.rating=3" />
+                </label>
+                
+                <label class="checkbox checkbox-energized" >
+                    <input type="checkbox" ng-checked="student.rating==2" ng-click="student.rating=2"/>
+                </label>
+                
+                <label class="checkbox checkbox-assertive">
+                    <input type="checkbox" ng-checked="student.rating==1" ng-click="student.rating=1"/>
+                </label>
+              </div>
+          </ion-item>
+   </ion-list>
+  
+  </ion-content>
+</ion-view>

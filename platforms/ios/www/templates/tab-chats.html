@@ -1,0 +1,17 @@
+<ion-view view-title="Standards Tracking">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="group in groups" type="item-text-wrap" href="#/tab/students/{{group.groupID}}">
+        <!--<img ng-src="{{group.image}}">-->
+        <ng-letter-avatar data="{{group.groupName}}"></ng-letter-avatar>
+        <h2>{{group.groupName}}</h2>
+        <p>{{group.groupDescription}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
