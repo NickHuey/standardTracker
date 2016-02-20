@@ -64,7 +64,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       url: '/students/:groupID',
       views: {
         'tab-tracking': {
-          templateUrl: 'templates/student-list.html',
+          templateUrl: 'templates/standard-list.html',
           controller: 'groupStudentCtrl'
         }
       }
