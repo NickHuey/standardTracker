@@ -65,7 +65,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       views: {
         'tab-tracking': {
           templateUrl: 'templates/standard-list.html',
-          controller: 'groupStudentCtrl'
+          controller: 'groupStandardsController'
         }
       }
     })

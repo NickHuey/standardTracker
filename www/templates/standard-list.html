@@ -1,11 +1,11 @@
-<ion-view view-title="Student Listing">
+<ion-view view-title="Standards Listing">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="student in students" type="item-text-wrap" href="#/tab/student/{{student.studentid}}">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="standard in standards" type="item-text-wrap" href="#/tab/student/{{student.studentid}}">
         <!--<img ng-src="./img/ben.png">-->
-        <ng-letter-avatar data="{{student.firstName}}"></ng-letter-avatar>
-        <h2>{{student.firstName}}</h2>
-        <p>{{student.lastName}}</p>
+        <ng-letter-avatar data="{{standard.standardName}}"></ng-letter-avatar>
+        <h2>{{standard.standardName}}</h2>
+        <p>{{standard.standardDescription}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
         <ion-option-button class="button-assertive" ng-click="remove(student)">

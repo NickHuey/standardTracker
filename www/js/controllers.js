@@ -41,6 +41,19 @@ angular.module('starter.controllers',['angular.filter'])
     
 }) 
 
+.controller('groupStandardsController',function($scope, $http, $log, $stateParams){
+    $scope.loadStandards = function(){
+    $http.get('http://edtechapi.azurewebsites.net/api/edtech/getGroupStandards/', {params:{"id":$stateParams.groupID}})
+    .then(function(response){
+        $scope.standards = response.data;
+    },
+    function(response){
+        $scope.error = response.data;
+    })
+    };
+ $scope.loadStandards();
+})
+
 .controller('studentController1', function($scope,$http,$log,$stateParams,$cordovaToast){
     
     $scope.showToast = function(message, duration, location) {
