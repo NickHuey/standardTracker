@@ -1,9 +1,21 @@
 <ion-view view-title="Standards Listing">
   <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="standard in standards" type="item-text-wrap" href="#/tab/student/{{student.studentid}}">
+    <ion-list ng-repeat="(key,value) in standards|groupBy:'standardName'">
+        <ion-item class="item-divider">
+            {{key}}
+          
+        </ion-item>
+        <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="standard in value" type="item-text-wrap" href="#/tab/student/{{student.studentid}}">
+            <ng-letter-avatar data="{{standard.skillName}}"></ng-letter-avatar>
+            <h2>{{standard.skillName}}</h2>
+            <p>{{standard.skillDescription}}</p>
+        </ion-item>
+    </ion-list>
+       
+       
+      <!--<ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="standard in standards" type="item-text-wrap" href="#/tab/student/{{student.studentid}}">-->
         <!--<img ng-src="./img/ben.png">-->
-        <ng-letter-avatar data="{{standard.standardName}}"></ng-letter-avatar>
+        <!--<ng-letter-avatar data="{{standard.standardName}}"></ng-letter-avatar>
         <h2>{{standard.standardName}}</h2>
         <p>{{standard.standardDescription}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
@@ -12,6 +24,6 @@
           Delete
         </ion-option-button>
       </ion-item>
-    </ion-list>
+    </ion-list>-->
   </ion-content>
 </ion-view>
