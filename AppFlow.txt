@@ -1,0 +1,18 @@
+Group Listing  : group-list.html (GetGroups)
+
+	-> Standards Listing : standard-list.html (GetGroupStandards)
+
+		-> Class Listing : (GetClassInfo)
+
+			-> Student Listing : (GetClassStudents)
+			
+				-> Student Rating : (GetStudentTracking) 
+
+
+EdTech API
+GetStudents(id)
+GetGroups(id)
+GetClassStudents(id)
+GetClassInfo(id)
+GetStudentTracking(id)
+GetGroupStandards(id)

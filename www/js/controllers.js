@@ -123,6 +123,24 @@ angular.module('starter.controllers',['angular.filter'])
                  
             
             })
+ 
+ .controller("classController",function($scope, $http, $log) {
+            
+            
+            var successCallBack = function(response){
+                     $scope.students = response.data;
+                 };
+                 
+            var errCallBack = function(response){
+                    $scope.error = response.data;
+                    $log.info(response);
+                 };
+            
+            $http.get('http://edtechapi.azurewebsites.net/api/edtech/getclassinfo/', {params:{"id":$scope.ownerid}})
+                 .then(successCallBack,errCallBack)
+                 
+            
+            })
             
  .controller("groupstudentController",function($scope, $http, $log, $stateParams) {
             

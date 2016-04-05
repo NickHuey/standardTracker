@@ -50,18 +50,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
     }
   })
 
+//change this to group listing (was tab-chats.html)
   .state('tab.tracking', {
       url: '/tracking',
       views: {
         'tab-tracking': {
-          templateUrl: 'templates/tab-chats.html',
+          templateUrl: 'templates/group-list.html',
           controller: 'groupController'
         }
       }
     })
     
-    .state('tab.tracking-students', {
-      url: '/students/:groupID',
+    .state('tab.tracking-standards', {
+      url: '/standards/:groupID',
       views: {
         'tab-tracking': {
           templateUrl: 'templates/standard-list.html',
