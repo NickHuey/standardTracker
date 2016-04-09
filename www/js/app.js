@@ -71,6 +71,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     })
     
+    .state('tab.tracking-class', {
+      url: '/class/:userid',
+      views: {
+        'tab-tracking': {
+          templateUrl: 'templates/class-list.html',
+          controller: 'classController'
+        }
+      }
+    })
+    
+    
+    
     .state('tab.tracking-studentdetail', {
       url: '/student/:studentID',
       views: {

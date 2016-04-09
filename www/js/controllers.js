@@ -54,6 +54,8 @@ angular.module('starter.controllers',['angular.filter'])
  $scope.loadStandards();
 })
 
+
+
 .controller('studentController1', function($scope,$http,$log,$stateParams,$cordovaToast){
     
     $scope.showToast = function(message, duration, location) {
@@ -125,10 +127,10 @@ angular.module('starter.controllers',['angular.filter'])
             })
  
  .controller("classController",function($scope, $http, $log) {
-            
+            $scope.ownerid = 1;
             
             var successCallBack = function(response){
-                     $scope.students = response.data;
+                     $scope.classes = response.data;
                  };
                  
             var errCallBack = function(response){
