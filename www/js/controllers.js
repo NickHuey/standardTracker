@@ -68,7 +68,7 @@ angular.module('starter.controllers',['angular.filter'])
     
     //get the data
     $scope.loadDetail=function(){
-        $http.get('http://edtechapi.azurewebsites.net/api/edtech/getstudenttracking/', {params:{"id":$stateParams.studentID}})
+        $http.get('http://edtechapi.azurewebsites.net/api/edtech/getstudenttracking/', {params:{"id":$stateParams.classid}})
         .then(function(response){
             $scope.studentdetail = response.data;
             $scope.firstName = $scope.studentdetail[0].firstName
@@ -106,9 +106,6 @@ angular.module('starter.controllers',['angular.filter'])
 
 .controller("studentController",function($scope, $http, $log) {
             
-            //search() function
-            //get students for ownerid
-            
             var successCallBack = function(response){
                      $scope.students = response.data;
                  };
@@ -117,10 +114,10 @@ angular.module('starter.controllers',['angular.filter'])
                     $scope.error = response.data;
                     $log.info(response);
                  };
-            //$scope.ownerid=1;
+            $scope.classid = 1;
             
             //$scope.search=function(){
-            $http.get('http://edtechapi.azurewebsites.net/api/edtech/getstudents/', {params:{"id":$scope.ownerid}})
+            $http.get('http://edtechapi.azurewebsites.net/api/edtech/getstudenttracking/', {params:{"id":$scope.classid}})
                  .then(successCallBack,errCallBack)
                  
             

@@ -82,12 +82,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
     })
     
     
-    
-    .state('tab.tracking-studentdetail', {
-      url: '/student/:studentID',
+    .state('tab.tracking-students', {
+      url: '/students/:classid',
       views: {
         'tab-tracking': {
-          templateUrl: 'templates/student-detail.html',
+          templateUrl: 'templates/student-list.html',
           controller: 'studentController1'
         }
       }

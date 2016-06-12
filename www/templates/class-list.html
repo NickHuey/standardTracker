@@ -1,7 +1,7 @@
 <ion-view view-title="Class Listing">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="class in classes" type="item-text-wrap" href="#/tab/standards/{{group.groupID}}">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="class in classes" type="item-text-wrap" href="#/tab/students/{{class.classid}}">
         <!--<img ng-src="{{group.image}}">-->
         <ng-letter-avatar data="{{class.className}}"></ng-letter-avatar>
         <h2>{{class.className}}</h2>

@@ -14,3 +14,7 @@ GetClassStudents(id)
 GetClassInfo(id)
 GetStudentTracking(id)
 GetGroupStandards(id)
+
+drop 
+sp_getGroupStudents
+relGroupStudent

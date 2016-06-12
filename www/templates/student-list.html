@@ -1,0 +1,33 @@
+
+<ion-view view-title="{{firstName}}">
+   <ion-nav-buttons side="right">
+       <button class="button button-icon " ng-click="saveRating(students)" >
+           Save
+       </button>
+       
+   </ion-nav-buttons>     
+  <ion-content class="has-header">
+   <ion-list>
+      
+          <ion-item ng-repeat="student in students" class="item-button-right item-avatar" >
+              <ng-letter-avatar data="{{student.lastName}}"></ng-letter-avatar>
+              <h2>{{student.firstName}}</h2>
+              <p>{{student.lastName}}</p>
+              <div class="buttons">
+                <label class="checkbox checkbox-balanced">
+                    <input type="checkbox" ng-checked="student.rating==3" ng-click="student.rating=3" />
+                </label>
+                
+                <label class="checkbox checkbox-energized" >
+                    <input type="checkbox" ng-checked="student.rating==2" ng-click="student.rating=2"/>
+                </label>
+                
+                <label class="checkbox checkbox-assertive">
+                    <input type="checkbox" ng-checked="student.rating==1" ng-click="student.rating=1"/>
+                </label>
+              </div>
+          </ion-item>
+   </ion-list>
+  
+  </ion-content>
+</ion-view>
